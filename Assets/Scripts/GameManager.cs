@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : DDOLSingleton<GameManager>
 {
+    public enum GameState { origin,battle,backpack}
+    public GameState state;
+
     public void Initialization()
     {
         gameObject.AddComponent<AudioSource>();
@@ -35,6 +38,5 @@ public class GameManager : DDOLSingleton<GameManager>
 
     }
     #endregion
-
-
+    
 }
