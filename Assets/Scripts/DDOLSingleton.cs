@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class DDOLSingleton<T> : MonoBehaviour where T : DDOLSingleton<T>
 {
     protected static T _instance = null;
-    public static T Instance()
+    public static T GetInstance()
     {
 
         if (_instance == null)

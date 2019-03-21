@@ -7,7 +7,8 @@ public class GameInitialization : MonoBehaviour
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
     public static void Initialization()
     {
-        GameManager.Instance();
-        InputManager.Instance();
+        GameManager.GetInstance();
+        InputManager.GetInstance();
+        TimeManager.GetInstance();
     }
 }

@@ -16,7 +16,6 @@ public class CharacterControl : MonoBehaviour
     {
         GameObject go = Resources.Load("Database") as GameObject;
         testdatabase = go.GetComponent<Database>();
-        print(testdatabase.test);
     }
 
     void Start()
@@ -24,12 +23,18 @@ public class CharacterControl : MonoBehaviour
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         sqrtspeed = Mathf.Sqrt(speed);
+        TimeManager.GetInstance().RunMethod(test);
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         CharacterMove();
+    }
+
+
+    public void test()
+    {
+
     }
 
     void CharacterMove()
